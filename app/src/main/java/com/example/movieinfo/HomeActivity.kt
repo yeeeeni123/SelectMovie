@@ -24,7 +24,7 @@ import com.example.movieinfo.bottomnav.MyPage
 import com.example.movieinfo.bottomnav.TicketList
 import com.example.movieinfo.bottomnav.Ticketing
 
-class BottomNavActivity : AppCompatActivity() {
+class HomeActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -54,7 +54,7 @@ fun BottomNavigations(navController: NavController) {
         BottomNavItem.MyPage,
     )
     BottomNavigation(
-        backgroundColor = colorResource(id = R.color.teal_200),
+        backgroundColor = colorResource(id = R.color.white),
         contentColor = Color.Black
     ) {
         val navBackStackEntry by navController.currentBackStackEntryAsState()

@@ -21,13 +21,13 @@ fun HomeScreen() {
     Column(
         modifier = Modifier
             .fillMaxSize()
-            .background(colorResource(id = R.color.teal_700))
+            .background(colorResource(id = R.color.white))
             .wrapContentSize(Alignment.Center)
     ) {
         Text(
             text = "Home Screen",
             fontWeight = FontWeight.Bold,
-            color = Color.White,
+            color = Color.DarkGray,
             modifier = Modifier.align(Alignment.CenterHorizontally),
             textAlign = TextAlign.Center,
             fontSize = 20.sp
@@ -40,13 +40,13 @@ fun Ticketing() {
     Column(
         modifier = Modifier
             .fillMaxSize()
-            .background(colorResource(id = R.color.teal_700))
+            .background(colorResource(id = R.color.white))
             .wrapContentSize(Alignment.Center)
     ) {
         Text(
-            text = "My Network Screen",
+            text = "Ticketing",
             fontWeight = FontWeight.Bold,
-            color = Color.White,
+            color = Color.DarkGray,
             modifier = Modifier.align(Alignment.CenterHorizontally),
             textAlign = TextAlign.Center,
             fontSize = 20.sp
@@ -59,13 +59,13 @@ fun TicketList() {
     Column(
         modifier = Modifier
             .fillMaxSize()
-            .background(colorResource(id = R.color.teal_700))
+            .background(colorResource(id = R.color.white))
             .wrapContentSize(Alignment.Center)
     ) {
         Text(
-            text = "Add Post Screen",
+            text = "TicketList",
             fontWeight = FontWeight.Bold,
-            color = Color.White,
+            color = Color.DarkGray,
             modifier = Modifier.align(Alignment.CenterHorizontally),
             textAlign = TextAlign.Center,
             fontSize = 20.sp
@@ -79,13 +79,13 @@ fun MyPage() {
     Column(
         modifier = Modifier
             .fillMaxSize()
-            .background(colorResource(id = R.color.teal_700))
+            .background(colorResource(id = R.color.white))
             .wrapContentSize(Alignment.Center)
     ) {
         Text(
-            text = "Notification Screen",
+            text = "MyPage",
             fontWeight = FontWeight.Bold,
-            color = Color.White,
+            color = Color.DarkGray,
             modifier = Modifier.align(Alignment.CenterHorizontally),
             textAlign = TextAlign.Center,
             fontSize = 20.sp
