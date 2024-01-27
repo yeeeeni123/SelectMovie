@@ -4,14 +4,20 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
+import androidx.compose.foundation.layout.Row
+import androidx.compose.foundation.layout.fillMaxHeight
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
+import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
+import androidx.compose.foundation.layout.size
+import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.foundation.text.KeyboardOptions
 import androidx.compose.material.Button
 import androidx.compose.material.Icon
@@ -41,8 +47,10 @@ import androidx.compose.ui.text.input.TextFieldValue
 import androidx.compose.ui.text.input.VisualTransformation
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
+import androidx.compose.ui.unit.sp
 import androidx.fragment.app.Fragment
 import androidx.navigation.NavController
+import com.example.movieinfo.R
 import com.example.movieinfo.base.BaseFragment
 import com.example.movieinfo.R.*
 import java.time.format.TextStyle
@@ -70,6 +78,19 @@ class LoginFragment: BaseFragment() {
             Modifier
                 .padding(16.dp)
                 .fillMaxWidth()) {
+
+            Column(
+                Modifier.fillMaxWidth()
+                    .padding(0.dp,50.dp,0.dp,20.dp),
+                verticalArrangement = Arrangement.Center,
+                horizontalAlignment = Alignment.CenterHorizontally){
+                Image(
+                    painter=painterResource(R.drawable.movie_login),
+                    contentDescription=null,
+                    Modifier.size(100.dp)
+                )
+            }
+
             OutlinedTextField(
                 modifier = Modifier.fillMaxWidth(),
                 value = userId,
@@ -104,41 +125,25 @@ class LoginFragment: BaseFragment() {
 
             Column(
                 Modifier
-                    .padding(16.dp)
+                    .padding(0.dp, 16.dp, 0.dp, 0.dp)
                     .fillMaxWidth(),
-                verticalArrangement = Arrangement.spacedBy(10.dp),
+                verticalArrangement = Arrangement.Center,
                 horizontalAlignment = Alignment.CenterHorizontally
             ) {
 
-                Box(modifier = Modifier.padding(12.dp)) {
-                    Column(
-                        modifier = Modifier
-                            .fillMaxWidth()
-                            .background(color = colorResource(id = color.brightRed), shape = RectangleShape)
-                    ) {
-
-                    }
-                }
-
-//                Box(modifier = )
-
-//                Text(text = "로그인",
-//                    style = androidx.compose.ui.text.TextStyle(
-//                        textAlign = TextAlign.Center
-//                    ),
-//                    modifier = Modifier
-//                        .fillMaxWidth()
-//                        .paint(painterResource(id = drawable.ic_btn_bg))
-//                        .padding(20.dp, 0.dp, 20.dp, 0.dp)
-//                        .clickable {
-//                            navCotroller.navigate("main")
-//                        })
-
-                Button(
-                    onClick = {
-                    navCotroller.navigate("main")
-                }) {
-                    Text(text = "로그인")
+                Column(
+                    Modifier.fillMaxWidth()
+                        .height(50.dp)
+                        .background(
+                            color = colorResource(id = color.brightRed),
+                            shape = RoundedCornerShape(20.dp)
+                        )
+                        .clickable {
+                            navCotroller.navigate("main")
+                        },
+                    verticalArrangement = Arrangement.Center,
+                    horizontalAlignment = Alignment.CenterHorizontally){
+                    Text("로그인", color = Color.White, fontSize = 16.sp)
                 }
 
                 Text(text = "회원가입",
@@ -146,6 +151,7 @@ class LoginFragment: BaseFragment() {
                         textAlign = TextAlign.Right
                     ),
                     modifier = Modifier
+                        .padding(0.dp, 10.dp, 10.dp, 0.dp)
                         .fillMaxWidth()
                         .clickable {
                             navCotroller.navigate("join")
