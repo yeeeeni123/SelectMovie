@@ -87,6 +87,8 @@ dependencies {
     implementation("com.google.firebase:firebase-analytics")
     implementation("com.google.dagger:hilt-android:2.44")
     implementation ("com.google.firebase:firebase-auth-ktx")
+    implementation ("androidx.datastore:datastore-preferences:1.0.0-alpha07")
+    implementation ("androidx.datastore:datastore-core:1.0.0-alpha07")
     kapt("com.google.dagger:hilt-android-compiler:2.44")
 }
 

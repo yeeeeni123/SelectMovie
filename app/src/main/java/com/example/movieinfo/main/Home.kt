@@ -19,7 +19,6 @@ import androidx.navigation.compose.composable
 import androidx.navigation.compose.currentBackStackEntryAsState
 import androidx.navigation.compose.rememberNavController
 import com.example.movieinfo.R
-import com.example.movieinfo.SplashView
 import com.example.movieinfo.base.BaseFragment
 import com.example.movieinfo.bottomnav.BottomNavItem
 import com.example.movieinfo.bottomnav.HomeScreen
@@ -27,14 +26,14 @@ import com.example.movieinfo.bottomnav.MyPage
 import com.example.movieinfo.bottomnav.TicketList
 import com.example.movieinfo.bottomnav.Ticketing
 
-class MainFragment : BaseFragment() {
+class Home : BaseFragment() {
     override fun initView() {
 
     }
 
     @SuppressLint("UnusedMaterialScaffoldPaddingParameter")
     @Composable
-    fun MainView() {
+    fun HomeView() {
         val navController = rememberNavController()
         Scaffold(
             bottomBar = { BottomNavigations(navController = navController) }
